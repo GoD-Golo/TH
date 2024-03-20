@@ -7,11 +7,13 @@ export default function Button({
   to,
   variant = "default",
   src,
+  onClick,
 }: {
   children: React.ReactNode;
   to: string;
   variant: string;
   src?: string;
+  onClick?: () => void;
 }) {
   if (variant === "default") return;
 
@@ -80,6 +82,25 @@ export default function Button({
       </Link>
     );
   }
+
+  if (variant === "avatar")
+    return (
+      <div
+        onClick={onClick}
+        className="mt-1 h-10 w-10 cursor-pointer overflow-hidden rounded-full border-2 border-amber-500 bg-slate-950"
+      >
+        {src ? (
+          <Image
+            src={src}
+            alt="Not found"
+            width={40}
+            height={40}
+            className="z-0"
+          />
+        ) : null}
+        {children}
+      </div>
+    );
 
   if (variant === "navlink")
     return (

@@ -39,7 +39,7 @@ export default function Hero() {
             {
               src: "/btn_bg/characters.png",
               text: "Create \n Characters",
-              to: "",
+              to: "aplicatie/creator-caracter",
             },
             {
               src: "/btn_bg/pt-content.png",

@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import "../../../src/app/globals.css";
 import { Roboto } from "next/font/google";
-import {} from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Aside from "@/components/Aside";
 
 export const metadata: Metadata = {
   title: "Inimă de Pumnal",
@@ -28,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex justify-center overflow-scroll border-l border-amber-500 bg-gradient-to-b from-purple-950 to-slate-950">
+    <div className="flex justify-center overflow-scroll border-l border-amber-500 bg-gradient-to-b from-indigo-900 to-slate-900 ">
       {children}
     </div>
   );
